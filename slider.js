@@ -1,5 +1,7 @@
-const prevButton = document.querySelector('.carousel-next');
-const nextButton = document.querySelector('.carousel-prev');
+const width = window.innerWidth
+
+const prevButton = document.querySelector(width <= 768 ? '.carousel-prev' : '.carousel-next');
+const nextButton = document.querySelector(width <= 768 ? '.carousel-next' : '.carousel-prev');
 const cardContainer = document.querySelector('.card-container');
 const cards = document.querySelectorAll('.card-slide');
 const slideStarContainer = document.querySelector('.slide-star');
