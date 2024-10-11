@@ -1,18 +1,21 @@
-const width = window.innerWidth
-
-const prevButton = document.querySelector(width <= 768 ? '.carousel-prev' : '.carousel-next');
-const nextButton = document.querySelector(width <= 768 ? '.carousel-next' : '.carousel-prev');
+const prevButton = document.querySelector('.carousel-prev');
+const nextButton = document.querySelector('.carousel-next');
 const cardContainer = document.querySelector('.card-container');
 const cards = document.querySelectorAll('.card-slide');
 const slideStarContainer = document.querySelector('.slide-star');
 
+let gap = 48
+
+if (window.innerWidth <= 768) {
+  gap = 24
+}
+
 let currentIndex = 0;
 const totalCards = cards.length;
-const cardWidth = cards[0].offsetWidth + 24;
+const cardWidth = cards[0].offsetWidth + gap;
 
 function updateSlidePosition() {
   cardContainer.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-  updateStars();
 }
 
 prevButton.addEventListener('click', () => {
@@ -30,6 +33,10 @@ nextButton.addEventListener('click', () => {
 });
 
 window.addEventListener('resize', () => {
-  const updatedCardWidth = cards[0].offsetWidth + 24;
+  if (window.innerWidth <= 768) {
+    gap = 24
+  }
+
+  const updatedCardWidth = cards[0].offsetWidth + gap;
   cardContainer.style.transform = `translateX(-${currentIndex * updatedCardWidth}px)`;
 });
