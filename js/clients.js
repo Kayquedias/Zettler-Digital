@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
       perPage = 1;
   }
 
-  const splide = new Splide('.splide', {
+  const splide = new Splide('.clients-splide', {
     type: 'loop',
     perPage,
     autoScroll: {
