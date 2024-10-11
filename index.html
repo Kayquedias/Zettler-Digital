@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shopify</title>
 
+  <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 
   <style>
     * {
@@ -39,6 +40,7 @@
   <link rel="stylesheet" href="header.css">
   <link rel="stylesheet" href="button.css">
   <link rel="stylesheet" href="main-hero.css">
+  <link rel="stylesheet" href="clients.css">
   <link rel="stylesheet" href="about-us.css">
   <link rel="stylesheet" href="cards-slider.css">
   <link rel="stylesheet" href="brands.css">
@@ -111,6 +113,44 @@
         <img src="./assets/left-img.png" class='portrait-side' id="first-picture" alt="Portrait 2" width="150" height="450" />
         <img src="./assets/middle-img.png" class='portrait-1' alt="Portrait 1" width="170" height="525" />
         <img src="./assets/right-img.png" class='portrait-side' alt="Portrait 3" width="150" height="450" />
+      </div>
+    </section>
+
+    <section class="clients-section">
+      <h5 class="title">Trusted by clients like</h5>
+    
+      <div class="clients-wrapper">
+        <div class="splide" role="group">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide client-logo">
+                <img src="./assets/logo-1.svg" alt="Client Logo 1" width="112" height="40" />
+              </li>
+              <li class="splide__slide client-logo">
+                <img src="./assets/logo-2.svg" alt="Client Logo 2" width="112" height="40" />
+              </li>
+              <li class="splide__slide client-logo">
+                <img src="./assets/logo-3.svg" alt="Client Logo 3" width="112" height="40" />
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="splide splide-reverse" role="group">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide client-logo">
+                <img src="./assets/logo-3.svg" alt="Client Logo 3" width="112" height="40" />
+              </li>
+              <li class="splide__slide client-logo">
+                <img src="./assets/logo-2.svg" alt="Client Logo 2" width="112" height="40" />
+              </li>
+              <li class="splide__slide client-logo">
+                <img src="./assets/logo-1.svg" alt="Client Logo 1" width="112" height="40" />
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -396,6 +436,9 @@
     </section>
   </main>
 
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+  <script src="./js/clients.js"></script>
   <script src="./js/slider.js"></script>
   <script src="./js/accordion.js"></script>
   <script src="./js/header.js"></script>

@@ -39,18 +39,12 @@ document.addEventListener("DOMContentLoaded", function () {
   mobileLinks.forEach(link => {
     link.addEventListener('click', function () {
       mobileMenu.classList.remove('active');
-      menuBars.forEach(bar => {
-        bar.classList.remove('active');
-      });
     });
   });
 
   document.addEventListener('click', function (event) {
     if (!mobileMenuIcon.contains(event.target) && !mobileMenu.contains(event.target)) {
       mobileMenu.classList.remove('active');
-      menuBars.forEach(bar => {
-        bar.classList.remove('active');
-      });
     }
   });
 
