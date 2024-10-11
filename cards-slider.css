@@ -126,6 +126,13 @@
   cursor: pointer;
 
   box-shadow: 3px 3px 0 #191A23;
+
+  transition: 0.4s all;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+  transform: translate(3px, 3px);
+  box-shadow: none;
 }
 
 .carousel-prev:active, .carousel-next:active {
