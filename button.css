@@ -8,15 +8,36 @@
 
 .default-button {
   width: 100%;
-  min-width: 230px;
-  padding: 1.2rem 4.4rem;
+  padding: 1.2rem 0;
   border-radius: 42px;
   cursor: pointer;
   border: none;
 
+  text-align: center;
   font-size: 2rem;
   font-weight: 500;
   line-height: 2.8rem;
+}
+
+.primary {
+  background-color: blue;
+  color: white;
+}
+
+.outline {
+  border: 1px solid #191A23;
+  color: #191A23;
+  background-color: white;
+}
+
+@media screen and (min-width: 440px) {
+  .buttons-container {
+    flex-direction: row;
+  }
+
+  .default-button {
+    min-width: 160px;
+  }
 }
 
 @media screen and (min-width: 640px) {
@@ -27,6 +48,8 @@
   }
 
   .default-button {
+    min-width: 230px;
     width: max-content;
+    padding: 1.6rem 4.2rem;
   }
 }

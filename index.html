@@ -10,6 +10,7 @@
     * {
       margin: 0;
       padding: 0;
+      text-decoration: none;
       box-sizing: border-box;
     }
 
@@ -24,7 +25,7 @@
 
     body {
       font-family: 'Arial', sans-serif;
-      background-color: #fdf6eb;
+      background-color: #FDF6EC;
       overflow-x: hidden;
     }
 
@@ -35,295 +36,369 @@
     }
   </style>
 
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="button.css">
+  <link rel="stylesheet" href="main-hero.css">
   <link rel="stylesheet" href="about-us.css">
   <link rel="stylesheet" href="cards-slider.css">
   <link rel="stylesheet" href="brands.css">
   <link rel="stylesheet" href="services.css">
 </head>
 <body>
-  <section class="about-us">
-    <h2>About Us</h2>
-    <p>
-      Zettler Digital is a performance marketing agency that helps e-commerce brands 
-      <strong>accelerate</strong> their growth and <strong>optimize</strong> their online presence.
-    </p>
-    
-    <div class="comparison-cards">
-      <div class="card their-way">
-        <h3>THEIR WAY</h3>
-        <h2>One Size Fits All</h2>
-        <p>
-          Pre-built plans that run through the same script with every client without considering 
-          your brand’s true needs.
-        </p>
-      </div>
+  <header class="header">
+    <div class="header-container">
+      <a href="#" class="logo">
+        <img src="./assets/logo.png" alt="Zettler Digital">
+      </a>
       
-      <div class="card our-way">
-        <h3>OUR WAY</h3>
-        <h2>Tailored Strategy</h2>
-        <p>
-          There’s no cookie cutter playbook here. We develop the right path to achieving a 
-          client’s goals with the services we know best.
-        </p>
-      </div>
+      <nav class="nav-desktop">
+        <ul class="nav-list">
+          <li><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-trigger">
+              Services
+              <img src="./assets/chevron-down.svg" alt="">
+            </a>
+
+            <div class="dropdown-content">
+              <a href="#">Service 1</a>
+              <a href="#">Service 2</a>
+              <a href="#">Service 3</a>
+            </div>
+          </li>
+          <li><a href="#">Work</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+  
+      <a href="#" class="btn-quote">Request a quote</a>
+      
+      <!-- Mobile menu icon -->
+      <img src="./assets/menu.svg" class="mobile-menu-icon">
     </div>
-  </section>
+  
+    <nav class="nav-mobile">
+      <ul class="nav-list-mobile">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Dark overlay -->
+  <div class="menu-overlay"></div>
 
-  <section class="marketing-cards">
-    <h2 class="mobile-title">Our Work</h2>
-
-    <h2>
-      Experience that
-      <span class="highlight">
-        drives results
-        <img src="./assets/blue-line.png" alt="">
-      </span> on the marketing channels that matter most
-    </h2>
+  <main>
+    <section class='hero-container'>
+      <div class='hero-background'>
+        <img src="./assets/hero-background.png" alt="Background Image" width="300" height="600" />
+      </div>
     
-    <div class="marketing-wrapper">
-      <div class="card-container">
-        <div class="card-slide">
-          <img src="./assets/notion.svg" alt="" class="image-detail">
-
-          <img src="./assets/Mariano.png" alt="Mariano Rivera" class="card-image">
-          <div class="card-content">
-            <p>We built a website for New York Yankees legend <strong>Mariano Rivera</strong> and The Mariano Rivera Foundation</p>
-            <a href="#" class="btn-learn-more">Learn More
-              <img src="./assets/arrow-up-right.svg" alt="" class="arrow-svg">
-            </a>
-          </div>
-        </div>
+      <div class="hero-content">
+        <h1 class='hero-title'>Digital marketing
+          managed for you</h1>
+        <p class='hero-description'>We help brands increase sales with email/SMS, website development and advertising</p>
         
-        <div class="card-slide">
-          <img src="./assets/notion.svg" alt="" class="image-detail">
-
-          <img src="./assets/Mariano.png" alt="Mariano Rivera" class="card-image">
-          <div class="card-content">
-            <p>We built a website for New York Yankees legend <strong>Mariano Rivera</strong> and The Mariano Rivera Foundation</p>
-            <a href="#" class="btn-learn-more">Learn More
-              <img src="./assets/arrow-up-right.svg" alt="" class="arrow-svg">
-            </a>
-          </div>
-        </div>
-    
-        <div class="card-slide">
-          <img src="./assets/notion.svg" alt="" class="image-detail">
-
-          <img src="./assets/Mariano.png" alt="Mariano Rivera" class="card-image">
-          <div class="card-content">
-            <p>We built a website for New York Yankees legend <strong>Mariano Rivera</strong> and The Mariano Rivera Foundation</p>
-            <a href="#" class="btn-learn-more">Learn More
-              <img src="./assets/arrow-up-right.svg" alt="" class="arrow-svg">
-            </a>
-          </div>
+        <div class="buttons-container">
+          <a href="#" class="default-button primary">Book a call</a>
+          <a href="#" class="default-button outline">View our work</a>
         </div>
       </div>
     
-      <div class="carousel-controls">
-        <button class="carousel-prev">
-          <img src="./assets/arrow-left.png" alt="">
-        </button>
-
-        <div class="slide-star">
-          <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7.0099 2.64339L14 0.583984L11.9604 7.59388L14 14.584L7.0099 12.5444L0 14.584L2.05941 7.59388L0 0.583984L7.0099 2.64339Z" fill="#191A23"/>
-          </svg>
-          <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7.0099 2.64339L14 0.583984L11.9604 7.59388L14 14.584L7.0099 12.5444L0 14.584L2.05941 7.59388L0 0.583984L7.0099 2.64339Z" fill="#191A23"/>
-          </svg>
-          <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7.0099 2.64339L14 0.583984L11.9604 7.59388L14 14.584L7.0099 12.5444L0 14.584L2.05941 7.59388L0 0.583984L7.0099 2.64339Z" fill="#191A23"/>
-          </svg>
-        </div>
-          
-
-        <button class="carousel-next">
-          <img src="./assets/arrow-right.png" alt="">
-        </button>
+      <div class="hero-portraits">
+        <img src="./assets/left-img.png" class='portrait-side' id="first-picture" alt="Portrait 2" width="150" height="450" />
+        <img src="./assets/middle-img.png" class='portrait-1' alt="Portrait 1" width="170" height="525" />
+        <img src="./assets/right-img.png" class='portrait-side' alt="Portrait 3" width="150" height="450" />
       </div>
+    </section>
 
-      <button class="see-all-btn">View all work</button>
-    </div>  
-  </section>
-
-  <section class="brands-section">
-    <div class="background">
-      <img src="./assets/brands-background.png" alt="">
-    </div>
-
-    <div class="brand-content">
-      <h1 class="brand-title">Over a decade helping 400+ brands grow</h1>
-      <p class="brand-description">From luxury, fashion, food, health & wellness, sports and lifestyle to world-class athletes</p>
-      <button type="button" class="brand-btn">Book a call</button>
-    </div>
-  </section>
-
-  <section class="services">
-    <h1>Our Services</h1>
-
-    <p>
-      Since 2004, Zettier Digital has supported over 400 brands
-      across luxury, fashion, food, health & wellness, sports and lifestyle categories
-      as well as world-class athletes
-    </p>
-
-    <div class="services-container">
-      <div class="service-card">
-        <img src="./assets/accordion.png" alt="" class="service-background">
-
-        <img src="./assets/brand-img.png" alt="">
-        
-        <h3>Design</h3>
-
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum ab deserunt autem quidem non provident porro possimus
-        </p>
-      </div>
-
-      <div class="service-card">
-        <img src="./assets/accordion.png" alt="" class="service-background">
-
-        <img src="./assets/code-icon.png" alt="">
-        
-        <h3>Web Development</h3>
-
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum ab deserunt autem quidem non provident porro possimus
-        </p>
-      </div>
-
-      <div class="service-card">
-        <img src="./assets/accordion.png" alt="" class="service-background">
-
-        <img src="./assets/window-icon.png" alt="">
-        
-        <h3>Email/SMS</h3>
-
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum ab deserunt autem quidem non provident porro possimus
-        </p>
-      </div>
-
-      <div class="service-card">
-        <img src="./assets/accordion.png" alt="" class="service-background">
-
-        <img src="./assets/phone-code.png" alt="">
-        
-        <h3>Paid Social</h3>
-
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum ab deserunt autem quidem non provident porro possimus
-        </p>
-      </div>
-    </div>
-
-    <div class="accordion">
-      <div class="accordion-item" id="question1">
-        <a class="accordion-link" href="#question1">
-          <div class="flex">
-            <span class="accordion-index"></span>
-
-            <h3>BRANDING</h3>
-
-          </div>
-          
-          <div class="icon ion-md-arrow-forward">
-            <img src="./assets/plus.svg" alt="">
-          </div>
-          <div class="icon ion-md-arrow-down">
-            <img src="./assets/dash.svg" alt="">
-          </div>
-        </a>
-
-        <div class="answer">
-          <img src="./assets/accordion.png" alt="">
-
-          <p> We believe in the greater good, we strive to do something for people, we aim to make their lives easier and more enjoyable, we love businesses that keep this</p>
-        
-          <a href="">Request a quote</a>
+    <section class="about-us">
+      <h2>About Us</h2>
+      <p>
+        Zettler Digital is a performance marketing agency that helps e-commerce brands 
+        <strong>accelerate</strong> their growth and <strong>optimize</strong> their online presence.
+      </p>
+      
+      <div class="comparison-cards">
+        <div class="card their-way">
+          <h3>THEIR WAY</h3>
+          <h2>One Size Fits All</h2>
+          <p>
+            Pre-built plans that run through the same script with every client without considering 
+            your brand’s true needs.
+          </p>
         </div>
         
-      </div>
-
-      <div class="accordion-item" id="question2">
-        <a class="accordion-link" href="#question2">
-          <div class="flex">
-            <span class="accordion-index"></span>
-
-            <h3>UX/UI DESIGN</h3>
-          </div>
-
-          <div class="icon ion-md-arrow-forward">
-            <img src="./assets/plus.svg" alt="">
-          </div>
-          <div class="icon ion-md-arrow-down">
-            <img src="./assets/dash.svg" alt="">
-          </div>
-        </a>
-
-        <div class="answer">
-          <img src="./assets/accordion.png" alt="">
-          
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-        
-          <a href="">Request a quote</a>
-        </div>
-        
-      </div>
-      <div class="accordion-item" id="question3">
-        <a class="accordion-link" href="#question3">
-          <div class="flex">
-            <span class="accordion-index"></span>
-
-            <h3>FRONTEND DEVELOPMENT</h3>
-          </div>
-          
-          <div class="icon ion-md-arrow-forward">
-            <img src="./assets/plus.svg" alt="">
-          </div>
-          <div class="icon ion-md-arrow-down">
-            <img src="./assets/dash.svg" alt="">
-          </div>
-        </a>
-
-        <div class="answer">
-          <img src="./assets/accordion.png" alt="">
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-
-          <a href="">Request a quote</a>
+        <div class="card our-way">
+          <h3>OUR WAY</h3>
+          <h2>Tailored Strategy</h2>
+          <p>
+            There’s no cookie cutter playbook here. We develop the right path to achieving a 
+            client’s goals with the services we know best.
+          </p>
         </div>
       </div>
-
-      <div class="accordion-item" id="question4">
-        <a class="accordion-link" href="#question4">
-          <div class="flex">
-            <span class="accordion-index"></span>
-
-            <h3>BACKEND DEVELOPMENT</h3>
+    </section>
+  
+    <section class="marketing-cards">
+      <h2 class="mobile-title">Our Work</h2>
+  
+      <h2>
+        Experience that
+        <span class="highlight">
+          drives results
+          <img src="./assets/blue-line.png" alt="">
+        </span> on the marketing channels that matter most
+      </h2>
+      
+      <div class="marketing-wrapper">
+        <div class="card-container">
+          <div class="card-slide">
+            <img src="./assets/notion.svg" alt="" class="image-detail">
+  
+            <img src="./assets/Mariano.png" alt="Mariano Rivera" class="card-image">
+            <div class="card-content">
+              <p>We built a website for New York Yankees legend <strong>Mariano Rivera</strong> and The Mariano Rivera Foundation</p>
+              <a href="#" class="btn-learn-more">Learn More
+                <img src="./assets/arrow-up-right.svg" alt="" class="arrow-svg">
+              </a>
+            </div>
           </div>
-
-          <div class="icon ion-md-arrow-forward">
-            <img src="./assets/plus.svg" alt="">
-          </div>
-          <div class="icon ion-md-arrow-down">
-            <img src="./assets/dash.svg" alt="">
-          </div>
-        </a>
-
-        <div class="answer">
-          <img src="./assets/accordion.png" alt="">
           
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-        
-          <a href="">Request a quote</a>
+          <div class="card-slide">
+            <img src="./assets/notion.svg" alt="" class="image-detail">
+  
+            <img src="./assets/Mariano.png" alt="Mariano Rivera" class="card-image">
+            <div class="card-content">
+              <p>We built a website for New York Yankees legend <strong>Mariano Rivera</strong> and The Mariano Rivera Foundation</p>
+              <a href="#" class="btn-learn-more">Learn More
+                <img src="./assets/arrow-up-right.svg" alt="" class="arrow-svg">
+              </a>
+            </div>
+          </div>
+      
+          <div class="card-slide">
+            <img src="./assets/notion.svg" alt="" class="image-detail">
+  
+            <img src="./assets/Mariano.png" alt="Mariano Rivera" class="card-image">
+            <div class="card-content">
+              <p>We built a website for New York Yankees legend <strong>Mariano Rivera</strong> and The Mariano Rivera Foundation</p>
+              <a href="#" class="btn-learn-more">Learn More
+                <img src="./assets/arrow-up-right.svg" alt="" class="arrow-svg">
+              </a>
+            </div>
+          </div>
         </div>
-        
+      
+        <div class="carousel-controls">
+          <button class="carousel-prev">
+            <img src="./assets/arrow-left.png" alt="">
+          </button>
+  
+          <div class="slide-star">
+            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.0099 2.64339L14 0.583984L11.9604 7.59388L14 14.584L7.0099 12.5444L0 14.584L2.05941 7.59388L0 0.583984L7.0099 2.64339Z" fill="#191A23"/>
+            </svg>
+            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.0099 2.64339L14 0.583984L11.9604 7.59388L14 14.584L7.0099 12.5444L0 14.584L2.05941 7.59388L0 0.583984L7.0099 2.64339Z" fill="#191A23"/>
+            </svg>
+            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.0099 2.64339L14 0.583984L11.9604 7.59388L14 14.584L7.0099 12.5444L0 14.584L2.05941 7.59388L0 0.583984L7.0099 2.64339Z" fill="#191A23"/>
+            </svg>
+          </div>
+            
+  
+          <button class="carousel-next">
+            <img src="./assets/arrow-right.png" alt="">
+          </button>
+        </div>
+  
+        <button class="see-all-btn">View all work</button>
+      </div>  
+    </section>
+  
+    <section class="brands-section">
+      <div class="background">
+        <img src="./assets/brands-background.png" alt="">
       </div>
-    </div>
-  </section>
+  
+      <div class="brand-content">
+        <h1 class="brand-title">Over a decade helping 400+ brands grow</h1>
+        <p class="brand-description">From luxury, fashion, food, health & wellness, sports and lifestyle to world-class athletes</p>
+        <button type="button" class="brand-btn">Book a call</button>
+      </div>
+    </section>
+  
+    <section class="services">
+      <h1>Our Services</h1>
+  
+      <p>
+        Since 2004, Zettier Digital has supported over 400 brands
+        across luxury, fashion, food, health & wellness, sports and lifestyle categories
+        as well as world-class athletes
+      </p>
+  
+      <div class="services-container">
+        <div class="service-card">
+          <img src="./assets/accordion.png" alt="" class="service-background">
+  
+          <img src="./assets/brand-img.png" alt="">
+          
+          <h3>Design</h3>
+  
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum ab deserunt autem quidem non provident porro possimus
+          </p>
+        </div>
+  
+        <div class="service-card">
+          <img src="./assets/accordion.png" alt="" class="service-background">
+  
+          <img src="./assets/code-icon.png" alt="">
+          
+          <h3>Web Development</h3>
+  
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum ab deserunt autem quidem non provident porro possimus
+          </p>
+        </div>
+  
+        <div class="service-card">
+          <img src="./assets/accordion.png" alt="" class="service-background">
+  
+          <img src="./assets/window-icon.png" alt="">
+          
+          <h3>Email/SMS</h3>
+  
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum ab deserunt autem quidem non provident porro possimus
+          </p>
+        </div>
+  
+        <div class="service-card">
+          <img src="./assets/accordion.png" alt="" class="service-background">
+  
+          <img src="./assets/phone-code.png" alt="">
+          
+          <h3>Paid Social</h3>
+  
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum ab deserunt autem quidem non provident porro possimus
+          </p>
+        </div>
+      </div>
+  
+      <div class="accordion">
+        <div class="accordion-item" id="question1">
+          <a class="accordion-link" href="#question1">
+            <div class="flex">
+              <span class="accordion-index"></span>
+  
+              <h3>BRANDING</h3>
+  
+            </div>
+            
+            <div class="icon ion-md-arrow-forward">
+              <img src="./assets/plus.svg" alt="">
+            </div>
+            <div class="icon ion-md-arrow-down">
+              <img src="./assets/dash.svg" alt="">
+            </div>
+          </a>
+  
+          <div class="answer">
+            <img src="./assets/accordion.png" alt="">
+  
+            <p> We believe in the greater good, we strive to do something for people, we aim to make their lives easier and more enjoyable, we love businesses that keep this</p>
+          
+            <a href="">Request a quote</a>
+          </div>
+          
+        </div>
+  
+        <div class="accordion-item" id="question2">
+          <a class="accordion-link" href="#question2">
+            <div class="flex">
+              <span class="accordion-index"></span>
+  
+              <h3>UX/UI DESIGN</h3>
+            </div>
+  
+            <div class="icon ion-md-arrow-forward">
+              <img src="./assets/plus.svg" alt="">
+            </div>
+            <div class="icon ion-md-arrow-down">
+              <img src="./assets/dash.svg" alt="">
+            </div>
+          </a>
+  
+          <div class="answer">
+            <img src="./assets/accordion.png" alt="">
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+          
+            <a href="">Request a quote</a>
+          </div>
+          
+        </div>
+        <div class="accordion-item" id="question3">
+          <a class="accordion-link" href="#question3">
+            <div class="flex">
+              <span class="accordion-index"></span>
+  
+              <h3>FRONTEND DEVELOPMENT</h3>
+            </div>
+            
+            <div class="icon ion-md-arrow-forward">
+              <img src="./assets/plus.svg" alt="">
+            </div>
+            <div class="icon ion-md-arrow-down">
+              <img src="./assets/dash.svg" alt="">
+            </div>
+          </a>
+  
+          <div class="answer">
+            <img src="./assets/accordion.png" alt="">
+  
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+  
+            <a href="">Request a quote</a>
+          </div>
+        </div>
+  
+        <div class="accordion-item" id="question4">
+          <a class="accordion-link" href="#question4">
+            <div class="flex">
+              <span class="accordion-index"></span>
+  
+              <h3>BACKEND DEVELOPMENT</h3>
+            </div>
+  
+            <div class="icon ion-md-arrow-forward">
+              <img src="./assets/plus.svg" alt="">
+            </div>
+            <div class="icon ion-md-arrow-down">
+              <img src="./assets/dash.svg" alt="">
+            </div>
+          </a>
+  
+          <div class="answer">
+            <img src="./assets/accordion.png" alt="">
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+          
+            <a href="">Request a quote</a>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <script src="slider.js"></script>
-  <script src="accordion.js"></script>
+  <script src="./js/slider.js"></script>
+  <script src="./js/accordion.js"></script>
+  <script src="./js/header.js"></script>
 </body>
 </html>

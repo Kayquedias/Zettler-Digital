@@ -1,0 +1,191 @@
+.hero-container {
+  width: 100%;
+  max-height: 1024px;
+  margin-top: 10rem;
+
+  display: grid;
+  grid-template-columns: 100%;
+  align-items: center;
+  gap: 5.5rem;
+}
+
+.hero-background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.hero-background img {
+  width: 1024px;
+  height: 100%;
+  max-height: 85rem;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 63rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 4.2rem;
+  line-height: 4.8rem;
+  font-weight: 700;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 2.6rem;
+  font-weight: 500;
+}
+
+.hero-portraits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.portrait-1 {
+  width: 50%;
+  max-width: 250px;
+  object-fit: contain;
+  z-index: 2;
+  height: max-content;
+}
+
+.portrait-side {
+  width: 40%;
+  max-width: 20rem;
+  flex-shrink: 1;
+  object-fit: contain;
+  z-index: 1;
+  height: max-content;
+}
+
+.portrait-side:first-of-type {
+  margin-right: calc(-15px + -6vw);
+}
+
+.portrait-side:last-of-type {
+  margin-left: calc(-15px + -6vw);
+}
+
+@media screen and (min-width: 768px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 10rem;
+  }
+
+  .hero-background img {
+    width: 100vw;
+  }
+
+  .hero-title {
+    font-size: 7.2rem;
+    line-height: 7.8rem;
+  }
+  
+  .hero-description {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+  }
+
+  .hero-buttons {
+    margin-top: 2.4rem;
+  }
+
+  .portrait-1 {
+    width: 37%;
+    max-width: none;
+  }
+
+  .portrait-side {
+    display: inline-block;
+    width: 31.5%;
+    max-width: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-container {
+    padding: 0 5rem;
+    max-width: 1280px;
+    margin: 20rem auto 10rem;
+  }
+
+  .hero-container {
+    grid-template-columns: 58% 1fr;
+    gap: 3rem;
+  }
+
+  .hero-content {
+    margin: 0;
+    gap: 3.6rem;
+  }
+
+  .buttons-container {
+    margin-top: 1.2rem;
+  }
+
+  .hero-title {
+    font-size: 6rem;
+    line-height: 6.6rem;
+  }
+  
+  .hero-description {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+
+  .portrait-1 {
+    min-width: 23rem;
+    width: 58%;
+    max-width: 26rem;
+  }
+
+  .portrait-side {
+    width: 39.5%;
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero-container {
+    padding: 0;
+    grid-template-columns: max-content 1fr;
+  }
+
+  .portrait-side:first-of-type {
+    margin-right: -68px;
+  }
+  
+  .portrait-side:last-of-type {
+    margin-left: -68px;
+  }
+
+  .portrait-side {
+    display: inline-block;
+    max-width: 22rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero-title {
+    font-size: 7.2rem;
+    line-height: 7.8rem;
+  }
+  
+  .hero-description {
+    font-size: 2.6rem;
+    line-height: 3rem;
+  }
+}
