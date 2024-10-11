@@ -55,6 +55,7 @@
   position: relative;
 
   background-color: white;
+  border: 1px solid #191A23;
   border-radius: 36px;
   min-width: 475px;
   height: 100%;
@@ -73,8 +74,6 @@
   object-fit: none;
   border-top-left-radius: 36px;
   border-top-right-radius: 36px;
-
-  border-left: 1px solid black;
 }
 
 .card-content {
