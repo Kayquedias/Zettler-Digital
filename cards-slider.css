@@ -211,3 +211,10 @@
     text-align: center;
   }
 }
+
+@media (hover: none) {
+  .carousel-prev:hover, .carousel-next:hover {
+    transform: none;
+    box-shadow: 3px 3px 0 #191A23;
+  }
+}

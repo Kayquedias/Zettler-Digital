@@ -228,3 +228,15 @@
     width: 75%;
   }
 }
+
+@media (hover: none) {
+  .dropdown-content a:hover {
+    background-color: #fff;
+    padding-left: 2rem;
+  } 
+  .nav-list-mobile li a:hover {
+    background-color: #fff;
+    box-shadow: none;
+    padding-left: 2rem;
+  }
+}
