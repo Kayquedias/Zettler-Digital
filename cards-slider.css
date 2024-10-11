@@ -6,6 +6,25 @@
   margin: 0 auto;
 }
 
+.marketing-cards h2 {
+  font-size: 4.2rem;
+  line-height: 5.1rem;
+  margin-bottom: 30px;
+  color: #191A23;
+
+  max-width: 1024px;
+}
+
+.highlight {
+  position: relative;
+}
+
+.highlight img {
+  position: absolute;
+  top: 4.6rem;
+  left: 0;
+}
+
 .marketing-wrapper {
   height: 700px;
   margin-bottom: 10rem;
@@ -22,25 +41,6 @@
   width: 40vw;
   height: calc(100% + 2rem);
   background: linear-gradient(to right, transparent 40%, #fdf6eb 65%);
-}
-
-.marketing-cards h2:nth-child(2) {
-  font-size: 4.2rem;
-  margin-bottom: 30px;
-  color: #191A23;
-
-  max-width: 1024px;
-}
-
-h2.mobile-title {
-  display: none;
-  color: white;
-  font-size: 2.4rem;
-  width: max-content;
-  border-radius: 8px;
-  padding: 0 8px;
-  font-weight: 500;
-  background-color: #00f;
 }
 
 .card-container {
@@ -93,7 +93,7 @@ h2.mobile-title {
   text-decoration: none;
   font-weight: 500;
   font-size: 2rem;
-  margin-top: 28px;
+  margin: 28px 0;
   display: inline-block;
 }
 
@@ -126,11 +126,10 @@ h2.mobile-title {
   cursor: pointer;
 
   box-shadow: 3px 3px 0 #191A23;
-  transition: 0.3s;
 }
 
-.carousel-prev:hover, .carousel-next:hover {
-  background-color: #ffffff91;
+.carousel-prev:active, .carousel-next:active {
+  box-shadow: none;
 }
 
 .see-all-btn {
@@ -152,28 +151,21 @@ h2.mobile-title {
   }
 
   .marketing-wrapper::after {
+    /* remove linear gradient */
     display: none;
+  }
+
+  .highlight img {
+    top: 4rem;
   }
 
   .marketing-cards {
     padding-top: 0;
   }
 
-  h2.mobile-title {
-    padding: 0.5rem 0.8rem;
-    font-size: 2rem;
-  }
-
-  .marketing-cards h2:nth-child(2) {
-    font-size: 1.8rem;
-    font-weight: 400;
-    color: #191A23;
-
-    margin-top: 24px;
-  }
-
-  h2.mobile-title {
-    display: block;
+  .marketing-cards h2 {
+    font-size: 3.6rem;
+    margin-bottom: 1.2rem;
   }
 
   .card-container {
@@ -181,60 +173,33 @@ h2.mobile-title {
   }
 
   .card-slide {
-    min-width: 78vw;
-    max-width: 350px;
-    background-color: transparent;
-    box-shadow: none;
+    min-width: 100%;
   }
 
   .card-image {
     width: 100%;
     min-height: 420px;
-    border-radius: 36px;
     object-fit: cover;
   }
 
   .card-content {
     font-size: 1.6rem;
     font-weight: normal;
-    padding: 16px 0;
+    padding: 1.6rem;
   }
 
-  .btn-learn-more {
-    background-color: transparent;
-    color: #00f;
-    margin-top: 0;
-    padding-left: 0;
-
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  
-  .arrow-svg {
-    display: block;
-    width: 20px;
+  .card-content p {
+    font-size: 1.8rem;
   }
 
   .carousel-controls {
-    margin-top: 0;
-    justify-content: space-between;
+    margin-top: 50px;
   }
+}
 
-  .slide-star {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .carousel-prev, .carousel-next {
-    background-color: transparent;
-    box-shadow: none;
-    border: none;
-    padding: 0;
-  }
-
-  .see-all-btn {
-    display: block;
+@media screen and (max-width: 640px) {
+  .btn-learn-more {
+    width: 100%;
+    text-align: center;
   }
 }

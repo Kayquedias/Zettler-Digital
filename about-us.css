@@ -11,16 +11,6 @@
   margin-bottom: 24px;
 }
 
-.highlight {
-  position: relative;
-}
-
-.highlight img {
-  position: absolute;
-  top: 4rem;
-  left: 0;
-}
-
 .about-us p {
   font-size: 2.8rem;
   font-weight: 500;
@@ -87,16 +77,15 @@
     margin: 0 auto;
   }
 
-  .about-us > h2 {
+  .about-us > h2:first-of-type {
     font-size: 3.8rem;
+    text-align: center;
   }
 
-  .highlight img {
-    display: none;
-  }
-
-  .about-us > p {
+  .about-us > p:first-of-type {
+    padding: 0;
     font-size: 2rem;
+    text-align: center;
   }
   
   .comparison-cards {
