@@ -52,7 +52,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 0 2rem;
+  padding: 0 7vw;
 }
 
 .portrait-1 {
@@ -102,6 +102,10 @@
 
   .hero-buttons {
     margin-top: 2.4rem;
+  }
+
+  .hero-portraits {
+    padding: 0 2rem;
   }
 
   .portrait-1 {
