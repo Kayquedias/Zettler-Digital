@@ -17,8 +17,12 @@ window.addEventListener("load", () => {
         const scrollDirection = scrollY > lastScrollY ? 1 : -1;
         lastScrollY = scrollY;
 
-        gsap
-          .timeline()
+        const anime = gsap
+          .timeline({
+            onComplete: () => {
+              anime.kill();
+            }
+          })
           .to(loops, {
             timeScale: (i) => (i % 2 > 0 ? 1 : -1) * scrollDirection,
             overwrite: true,
@@ -32,7 +36,8 @@ window.addEventListener("load", () => {
               ease: 'power2'
             },
             "+=0.1"
-          );
+          )
+          
       },
     }
   })
