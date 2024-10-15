@@ -1,5 +1,66 @@
 gsap.registerPlugin(ScrollTrigger);
 
+let lastScrollY = window.scrollY
+
+const slides = document.querySelectorAll('.background .splide__list')
+
+window.addEventListener("load", () => {
+  const loops = [];
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".brands-section",
+      start: "top+=100 bottom",
+      end: "bottom top+=200",
+      scrub: true,
+      onUpdate: (s) => {
+        const scrollY = window.scrollY;
+        const scrollDirection = scrollY > lastScrollY ? 1 : -1;
+        lastScrollY = scrollY;
+
+        gsap
+          .timeline()
+          .to(loops, {
+            timeScale: (i) => (i % 2 > 0 ? 1 : -1) * scrollDirection,
+            overwrite: true,
+            duration: 0.1
+          })
+          .to(
+            loops,
+            {
+              timeScale: 0,
+              duration: 2,
+              ease: 'power2'
+            },
+            "+=0.1"
+          );
+      },
+    }
+  })
+
+  // Clone items to fill row for background animation in brands-section
+  slides.forEach((slideList, i) => {
+    const slides = slideList.querySelectorAll('.splide__slide');
+    
+    slides.forEach(slide => {
+      const clone = slide.cloneNode(true);
+      slideList.appendChild(clone);
+    });
+  });
+
+  slides.forEach((slide, i) => {
+    const lis = gsap.utils.toArray(".splide__slide", slide);
+    const reversed = i % 2 > 0;
+
+    loops.push(
+      horizontalLoop(lis, {
+        repeat: -1,
+        speed: 5,
+        reversed: !reversed,
+      }).timeScale(0)
+    );
+  });
+});
+
 /*
 This helper function makes a group of elements animate along the x-axis in a seamless, responsive loop.
 
@@ -20,14 +81,8 @@ function horizontalLoop(items, config) {
   let tl = gsap.timeline({
       repeat: config.repeat,
       paused: config.paused,
-      defaults: { ease: config.ease || 'none' },
-      onReverseComplete: () => tl.totalTime(tl.rawTime() + tl.duration() * 100),
-      scrollTrigger: {
-        trigger: '.brands-section',
-        start: "top+=100 bottom",
-        end: "bottom top+=200",
-        scrub: true,
-      }
+      defaults: { ease: "none" },
+      onReverseComplete: () => tl.totalTime(tl.rawTime() + tl.duration() * 100)
     }),
     length = items.length,
     startX = items[0].offsetLeft,
@@ -52,7 +107,7 @@ function horizontalLoop(items, config) {
           gsap.getProperty(el, "xPercent")
       );
       return xPercents[i];
-    },
+    }
   });
   gsap.set(items, { x: 0 });
   totalWidth =
@@ -72,7 +127,7 @@ function horizontalLoop(items, config) {
       item,
       {
         xPercent: snap(((curX - distanceToLoop) / widths[i]) * 100),
-        duration: distanceToLoop / pixelsPerSecond,
+        duration: distanceToLoop / pixelsPerSecond
       },
       0
     )
@@ -81,13 +136,13 @@ function horizontalLoop(items, config) {
         {
           xPercent: snap(
             ((curX - distanceToLoop + totalWidth) / widths[i]) * 100
-          ),
+          )
         },
         {
           xPercent: xPercents[i],
           duration:
             (curX - distanceToLoop + totalWidth - curX) / pixelsPerSecond,
-          immediateRender: false,
+          immediateRender: false
         },
         distanceToLoop / pixelsPerSecond
       )
@@ -121,24 +176,3 @@ function horizontalLoop(items, config) {
   }
   return tl;
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-  const sections = ['#first', '#second', '#third', '#fourth'];
-  
-  sections.forEach((section) => {
-    const brandContainer = document.querySelector(`${section} .splide__list`);
-    const brandElements = document.querySelectorAll(`${section} .brand`);
-
-    brandElements.forEach(brand => {
-      const clone = brand.cloneNode(true)
-      brandContainer.appendChild(clone);
-    });
-
-    const loop = horizontalLoop(`${section} .brand`, {
-      repeat: -1,
-      speed: 0.5,
-    });
-  });
-});
-
-
