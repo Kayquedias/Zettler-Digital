@@ -1,0 +1,402 @@
+
+.trust {
+  margin: 10rem auto;
+  padding: 0 2rem;
+  max-width: 1280px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10rem;
+}
+
+.trust-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.trust-title {
+  font-size: 6rem;
+  line-height: 7.3rem;
+  font-weight: 700;
+  animation: flipdown 0.5s ease both;
+
+  min-width: 540px;
+}
+
+.trust-description {
+  color: var(--black);
+  font-size: 17px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  max-height: 800px;
+  transition: all 0.25s ease-in-out;
+  opacity: 1;
+  transform: translate(0, 0);
+  margin-top: 14px;
+  z-index: 2;
+}
+
+.trust-image-wrapper {
+  grid-column: 2 / 4;
+}
+
+.trust-image-wrapper-mobile {
+  display: none;
+  height: 60vh;
+}
+
+.img-container {
+  position: relative;
+  height: 100%;
+  max-width: 600px;
+}
+
+.trust-brand {
+  position: absolute;
+
+  padding: 2rem 1.5rem;
+  background-color: white;
+  border-radius: 1.2rem;
+}
+
+.trust-brand img {
+  z-index: 1;
+}
+
+.brand-1 {
+  width: fit-content;
+  max-width: 155px;
+  height: max-content;
+  left: 5%;
+  top: 20%;
+  padding: 2rem;
+}
+
+.brand-2 {
+  width: max-content;
+  max-width: 160px;
+  height: max-content;
+  top: 39%;
+  left: -4%;
+}
+
+.brand-3 {
+  width: max-content;
+  height: fit-content;
+  max-width: 150px;
+  top: 56%;
+  right: -10.6%;
+
+  padding: 2rem 2.7rem;
+}
+
+.brand-4 {
+  width: fit-content;
+  padding: 1.2rem 3.8rem;
+  top: 72%;
+  right: -4%;
+}
+
+.main-image-details {
+  position: relative;
+  height: 100%;
+  z-index: -1;
+}
+
+.main-image-details img {
+  position: absolute;
+}
+
+.main-image-details .curve-left {
+  top: 28%; left: -18%;
+  z-index: -2;
+}
+
+.main-image-details .curve-right {
+  top: 22%; right: -11.8%;
+  z-index: -2;
+}
+
+.main-picture {
+  width: 100%;
+  max-width: 538px;
+  height: max-content;
+  top: 50%;left: 50%; 
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 1440px) {
+  .trust {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+
+  .trust-title {
+    font-size: 5rem;
+    line-height: 5.8rem;
+    min-width: auto;
+  }
+
+  .img-container {
+    margin-left: 2rem;
+  }
+
+  .main-image-details .curve-left {
+    left: -8vw;
+  }
+
+  .main-image-details .curve-right {
+    right: -4vw;
+  }
+
+  .brand-3 {
+    right: -2.8vw
+  }
+
+  .brand-4 {
+    right: -1vw;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .trust {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-title, .trust-wrapper > .trust-description {
+    width: fit-content;
+    max-width: 60rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .trust-image-wrapper-mobile {
+    display: block;
+  }
+
+  .trust-image-wrapper {
+    display: none;
+  }
+
+  .img-container {
+    margin-left: 0;
+    margin: 0 auto;
+  }
+
+  .brand-3 {
+    right: -3.4vw
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .trust-image-wrapper-mobile {
+    height: 85vw;
+  }
+
+  .trust-brand {
+    max-width: 125px;
+    height: fit-content;
+  }
+
+  .main-image-details .curve-left {
+    left: 2vw;
+  }
+
+  .main-image-details .curve-right {
+    right: -1vw;
+    top: 33%;
+  }
+
+  .brand-1 {
+    max-width: 150px;
+    left: 12%;
+    right: -3.4vw;
+  }
+
+  .brand-2 {
+    max-width: 140px;
+    top: 58%;
+    left: 4%;
+  }
+
+  .brand-3 {
+    top: 62%;
+    right: 0vw
+  }
+
+  .brand-4 {
+    top: 78%;
+    right: 8vw;
+    max-width: 140px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .trust-brand {
+    max-width: 120px;
+  }
+
+  .brand-1 {
+    top: 10%;
+    left: 8%;
+  }
+
+  .brand-2 {
+    top: 44%;
+    left: -2%;
+    max-width: 110px;
+  }
+
+  .brand-4 {
+    top: 86%;
+    right: 6vw;
+  }
+}
+
+
+/* Accordion */
+.no-select {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.accordion-wrapper {
+  margin-top: 1.2rem;
+  padding-right: 8rem;
+
+  list-style: none;
+}
+
+.accordion-title {
+  font-size: 3rem;
+  line-height: 3.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.accordion-wrapper .trust-description {
+  padding-right: 5rem;
+}
+
+.accordion-wrapper li {
+  position: relative;
+  padding-bottom: 3rem;
+  padding-top: 2rem;
+  border-bottom: 1px solid #191A23;
+  animation: flipdown 0.5s ease both;
+}
+
+.accordion-wrapper li:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+
+.accordion-wrapper li:nth-of-type(2) {
+  animation-delay: 0.75s;
+}
+
+.accordion-wrapper li:nth-of-type(3) {
+  animation-delay: 1.0s;
+}
+
+.accordion-wrapper li img {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 6px;
+  right: 0;
+}
+
+.accordion-wrapper li input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+}
+
+.accordion-wrapper li input[type=checkbox]:checked ~ p {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, 50%);
+}
+
+.accordion-wrapper li input[type=checkbox]:checked ~ img {
+  transform: translate(-2px, 0) rotate(0deg);
+}
+
+.accordion-wrapper li img {
+  transition: 0.3s all;
+  transform: rotate(45deg);
+
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+@keyframes flipdown {
+  0% {
+    opacity: 0;
+    transform-origin: top center;
+    transform: rotateX(-90deg);
+  }
+  5% {
+    opacity: 1;
+  }
+  80% {
+    transform: rotateX(8deg);
+  }
+  83% {
+    transform: rotateX(6deg);
+  }
+  92% {
+    transform: rotateX(-3deg);
+  }
+  100% {
+    transform-origin: top center;
+    transform: rotateX(0deg);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .accordion-wrapper {
+    max-width: 80rem;
+    margin: 0 auto;
+    margin-top: 4rem;
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .accordion-wrapper {
+    margin-top: 6rem;
+  }
+
+  .accordion-wrapper li {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .accordion-title {
+    font-size: 2.8rem;
+  }
+
+  li .trust-description {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 400;
+  }
+}
