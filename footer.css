@@ -143,12 +143,27 @@ footer {
   text-decoration: underline;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .footer-contacts {
     flex-direction: column-reverse;
     gap: 4rem;
   }
 
+  
+  .footer-contacts {
+    align-items: center;
+    gap: 10rem;
+  }
+
+  .email-container {
+    width: 100%;
+    padding: 4rem 3rem;
+
+    max-width: 768px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
   .footer-bottom {
     flex-direction: column-reverse;
     gap: 40px;
@@ -169,18 +184,11 @@ footer {
     display: block;
   }
 
-  .email-container {
-    width: 100%;
-    padding: 4rem 3rem;
-  }
+
 
   .footer-links {
     padding-right: 2.4rem;
     gap: 4.2rem;
-  }
-
-  .footer-contacts {
-    align-items: center;
   }
 
   .footer-bottom {
