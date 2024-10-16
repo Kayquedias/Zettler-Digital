@@ -5,39 +5,40 @@ let lastScrollY = window.scrollY
 const slides = document.querySelectorAll('.background .splide__list')
 
 window.addEventListener("load", () => {
+  let anime;
+
   const loops = [];
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".brands-section",
       start: "top+=100 bottom",
       end: "bottom top+=200",
-      scrub: true,
-      onUpdate: (s) => {
+      scrub: 0.01,
+      onUpdate: (self) => {
         const scrollY = window.scrollY;
         const scrollDirection = scrollY > lastScrollY ? 1 : -1;
         lastScrollY = scrollY;
 
-        const anime = gsap
-          .timeline({
-            onComplete: () => {
-              anime.kill();
-            }
-          })
-          .to(loops, {
-            timeScale: (i) => (i % 2 > 0 ? 1 : -1) * scrollDirection,
-            overwrite: true,
-            duration: 0.1
-          })
-          .to(
-            loops,
-            {
-              timeScale: 0,
-              duration: 2,
-              ease: 'power2'
-            },
-            "+=0.1"
-          )
-          
+        loops.forEach((loop) => {
+          gsap
+            .timeline({
+              onComplete: () => (isTweening = false),
+            })
+            .to(loops, {
+              timeScale: (i) => (i % 2 > 0 ? 1 : -1) * scrollDirection,
+              overwrite: true,
+              duration: 0.1
+            })
+            .to(
+              loops,
+              {
+                timeScale: 0,
+                duration: 2,
+                ease: "back"
+              },
+              "+=0.1"
+            );
+        })
       },
     }
   })
@@ -81,6 +82,8 @@ Features:
 - times - an Array of the times on the timeline where each element hits the "starting" spot. There's also a label added accordingly, so "label1" is when the 2nd element reaches the start.
 */
 function horizontalLoop(items, config) {
+  console.log('horizontal')
+
   items = gsap.utils.toArray(items);
   config = config || {};
   let tl = gsap.timeline({
