@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, {
       filter: 'blur(0px)',
       z: 0,
-      duration: 0.5,
+      duration: 5,
       scrollTrigger: {
         trigger: element,
         start: `top bottom-=100px`,
